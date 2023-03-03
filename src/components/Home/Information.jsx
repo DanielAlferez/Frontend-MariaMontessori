@@ -47,8 +47,18 @@ function Information() {
                 <p className='top-2/3 left-1/2 -translate-x-1/2  absolute text-3xl font-semibold text-center text-white'>Educacion media</p>
             </div>
         </div>
-        <div className='bg-green-100 p-32 -mt-20 z-0'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum numquam itaque tenetur ex deserunt quidem odio maxime alias vitae? Possimus, odio omnis autem dolores fuga facilis dolor eius quas repudiandae asperiores! Quaerat, cum dolorem distinctio fugiat iusto accusamus deleniti facere accusantium, tenetur eum tempore asperiores voluptate quisquam pariatur dolores placeat laborum quae. Nostrum quos molestias quo, nihil blanditiis nam minima quisquam! Ullam quisquam ea autem rem tenetur fugit tempora, nemo repellat eum eveniet, ex obcaecati dignissimos. Consequuntur aliquam odio totam exercitationem? Explicabo nemo maiores impedit? Enim ut voluptatum soluta excepturi, magnam aut explicabo repudiandae inventore! Molestias aut sequi beatae officia.
+        <div className='items-center flex-col bg-green-100 p-20 -mt-20 z-0 w-full text-center flex '>
+            <h1 className='md:w-80 text-principal font-bold text-2xl mt-20' >Modalidades academicas para la educacion media</h1>
+            <div className='grid md:grid-cols-2 gap-10 mt-20'>
+                <div>
+                    <h2 className='font-semibold text-lg'>Técnico en Animación Turistica</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fuga tempore id dolore est reprehenderit iste hic voluptatum? Quaerat, qui.</p>
+                </div>
+                <div>
+                    <h2 className='font-semibold text-lg'>Conservacion de Recursos Naturales</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fuga tempore id dolore est reprehenderit iste hic voluptatum? Quaerat, qui.</p>
+                </div>
+            </div>
         </div>
     </div>
   )
