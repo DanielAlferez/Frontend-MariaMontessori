@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { fetchPosts } from "./thunks";
 
 const initialState = {
     posts: [],
-    isLoading: false,
+    loading: false,
+    error: null,
     primaryPosts: [],
     secondaryPosts: []
 }
@@ -10,20 +12,25 @@ const initialState = {
 const newsSlice = createSlice({
     name: "posts",
     initialState,
-    reducers: {
-        setPosts: (state, action) => {
-            state.isLoading = false;
-            state.posts = action.payload;
-            const sortedPosts = action.payload.sort((a, b) => b.id - a.id);
-            state.primaryPosts = sortedPosts.slice(0, 2)
-            state.secondaryPosts = sortedPosts.slice(2, 5)
-        },
-        startLoadingPosts: (state) => {
-            state.isLoading = true
-        }
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchPosts.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(fetchPosts.fulfilled, (state, action) => {
+                state.loading = false;
+                state.posts = action.payload
+                const sortedPosts = action.payload.sort((a, b) => b.id - a.id);
+                state.primaryPosts = sortedPosts.slice(0, 2)
+                state.secondaryPosts = sortedPosts.slice(2, 5)
+            })
+            .addCase(fetchPosts.rejected, (state, action) => {
+                state.error = action.error.message
+            })
     }
 })
 
-export const { setPosts, startLoadingPosts } = newsSlice.actions;
+
 
 export default newsSlice.reducer;

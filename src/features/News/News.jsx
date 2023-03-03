@@ -1,20 +1,20 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Post from './Post'
-import PostSecondary from './PostSecondary'
-import { getPosts } from './thunks'
+import PostPrimary from '../../components/Posts/PostPrimary'
+import PostSecondary from '../../components/Posts/PostSecondary'
 import { Skeleton } from '@mui/material'
+import { fetchPosts } from './thunks'
 
 function News() {
 
   const dispatch = useDispatch();
   const principalPost = useSelector(((state) => state.posts.primaryPosts))
   const secondaryPost = useSelector((state) => state.posts.secondaryPosts)
-  const isLoading = useSelector((state) => state.posts.isLoading)
+  const isLoading = useSelector((state) => state.posts.loading)
 
   React.useEffect(() => {
-    dispatch(getPosts())
-  }, [])
+    dispatch(fetchPosts());
+  }, [dispatch])
 
   if (isLoading) {
     return(
@@ -30,12 +30,12 @@ function News() {
         <div className='lg:grid grid-cols-3 lg:divide-x-8 m-20'>
           <div className='col-span-2'>
             {principalPost.map((post) => (
-              <Post key={post.id} title={post.titulo} description={post.descripcion} image={post.imagen}/>
+              <PostPrimary key={post.id} id={post.id} title={post.titulo} description={post.descripcion} image={post.imagen}/>
             ))}
           </div>
           <div className='flex flex-wrap lg:flex-col justify-center'>
             {secondaryPost.map((post) => (
-              <PostSecondary key={post.id} title={post.titulo} description={post.descripcion} image={post.imagen}/>
+              <PostSecondary key={post.id} id={post.id} title={post.titulo} description={post.descripcion} image={post.imagen}/>
             ))}
           </div>
         </div>

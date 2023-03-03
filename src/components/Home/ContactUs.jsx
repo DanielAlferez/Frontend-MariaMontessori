@@ -18,14 +18,15 @@ function ContactUs() {
           </div>
         </div>
         <div className='col-span-2 m-10 '>
-          <MapContainer className='w-full h-80' center={[51.505, -0.09]} zoom={13} >
+          <MapContainer className='w-full h-80' center={[3.98282, -73.76168]} zoom={20} >
               <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <Marker position={[51.505, -0.09]}>
+              <Marker position={[3.98282, -73.76168]}>
                   <Popup>
-                  A pretty CSS3 popup. <br /> Easily customizable.
+                    <h1 className='text-center font-bold '>Maria Montessori</h1>
+                    <p>Carrera 17A #9-49 Barrio Jardín, Acacias, Meta</p>
                   </Popup>
               </Marker>
           </MapContainer>
