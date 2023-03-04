@@ -1,6 +1,8 @@
 import React from 'react'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
+import { BsTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 function ContactUs() {
   return (
@@ -8,12 +10,12 @@ function ContactUs() {
       <div className='lg:grid grid-cols-3 lg:p-20'>
         <div className='flex flex-col items-center justify-center text-center gap-y-8'>
           <h1 className='font-bold text-4xl'>Contáctanos</h1>
-          <div>
-            TEL
+          <div className='flex flex-col items-center gap-2'>
+            <BsTelephoneFill className=' w-8 h-8'/>
             <p>(+57) 3115187384</p>
           </div>
-          <div>
-            EMAIL
+          <div className='flex flex-col items-center gap-2'>
+            <MdEmail className=' w-10 h-10'/>
             <p>lemariamontessori@acacias.edu.co</p>
           </div>
         </div>

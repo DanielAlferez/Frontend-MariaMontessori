@@ -8,12 +8,12 @@ import ContactUs from './Home/ContactUs'
 
 export default function Home() {
 
-  const image = "https://scontent.fvvc1-1.fna.fbcdn.net/v/t39.30808-6/305665277_521963996597078_5034068545273866825_n.jpg?stp=dst-jpg_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=04h48Nf3D_4AX8nlm5E&_nc_ht=scontent.fvvc1-1.fna&oh=00_AfClEdsO1UxCg2vQQMu6J-nGhOyJa8GWbgIwV1Fexv7deA&oe=64032BED"
+  const image = "https://cdn.pixabay.com/photo/2016/11/14/05/15/academic-1822682_960_720.jpg"
 
   return (
-    <div className='bg-gray-50 overflow-x-hidden'>
+    <div className='overflow-x-clip'>
       <Layout>
-        <div className='flex flex-col gap-y-5 justify-center items-center text-principal font-bold text-4xl'>
+        <div className='mt-10 flex flex-col gap-y-5 justify-center items-center text-principal font-bold text-4xl'>
           <p className='max-w-sm'>Nuestro reto es</p>
           <p className='max-w-sm'>LA EXCELENCIA</p>
         </div>

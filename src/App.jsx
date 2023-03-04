@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 import Home from './components/Home'
-import Post from './components/Posts/Post'
-import Posts from './components/Posts/Posts'
+import Post from './features/Posts/Post'
+import Posts from './features/News/Posts'
 
 function App() {
   return (
