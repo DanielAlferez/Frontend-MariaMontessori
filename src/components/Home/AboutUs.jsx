@@ -1,4 +1,6 @@
 import React from 'react'
+import mision from '../../assets/mision_img.webp'
+import vision from '../../assets/vision_img.webp'
 
 function AboutUs() {
   return (
@@ -8,15 +10,22 @@ function AboutUs() {
             <div className='grid lg:grid-cols-2 gap-y-10 justify-center mx-10'>
                 {/* mision */}
                 <div className='lg:pl-48 lg:pr-16 flex flex-col items-center'>
-                    <img className='rounded-full' src="https://cloudfront-us-east-1.images.arcpublishing.com/semana/NEDRHM3KONAINNZNFXGHSVR73E.jpg" alt="" />
+                    <img className='rounded-full' src={mision} alt="" />
                     <h1 className='text-center font-bold text-xl my-5'>Misión</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptates minus voluptatum saepe aliquam distinctio, et ducimus cupiditate temporibus quisquam. Nobis blanditiis aliquam molestiae odit quo nihil! Molestiae commodi distinctio delectus consequuntur mollitia fugiat non explicabo quaerat quis id nostrum, quia, ex odio. Numquam doloremque voluptas est eveniet. Molestias, incidunt!</p>
+                    <p>Somos la Institución Educativa María Montessori, de Acacias Meta, fundada en el año 1971, de carácter público, la cual ofrece un
+                        servicio educativo incluyente en los ciclos de educación preescolar, básica, media académica y técnica con modalidades turística y
+                        ambiental; trabajamos pedagógicamente el “Aprender a Aprehender Haciendo”, comprometidos en la formación integral de estudiantes
+                        autónomos y competentes, líderes transformadores de su entorno.
+                    </p>
                 </div>
                 {/* vision */}
                 <div className='lg:pl-16 lg:pr-48 flex flex-col items-center'>
-                    <img className='rounded-full' src="https://cloudfront-us-east-1.images.arcpublishing.com/semana/NEDRHM3KONAINNZNFXGHSVR73E.jpg" alt="" />
+                    <img className='rounded-full' src={vision} alt="" />
                     <h1 className='text-center font-bold text-xl my-5'>Visión</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptates minus voluptatum saepe aliquam distinctio, et ducimus cupiditate temporibus quisquam. Nobis blanditiis aliquam molestiae odit quo nihil! Molestiae commodi distinctio delectus consequuntur mollitia fugiat non explicabo quaerat quis id nostrum, quia, ex odio. Numquam doloremque voluptas est eveniet. Molestias, incidunt!</p>
+                    <p>Al año 2028 seremos una Institución incluyente, reconocida por la excelencia y calidad educativa, formadora de ciudadanos críticos,
+                        resilientes y gestores de paz comprometidos con la justicia social; con identidad cultural; principios turísticos, ambientales sostenibles y
+                        tecnológicos; líderes del desarrollo local y regional.
+                    </p>
                 </div>
             </div>
         </div>

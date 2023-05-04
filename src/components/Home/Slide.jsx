@@ -1,12 +1,15 @@
 import React from 'react'
+import img1 from '../../assets/information_img3.webp'
+import img2 from '../../assets/information_img4.webp'
+import img3 from '../../assets/img_home.webp'
 
 function Slide() {
   return (
     <div className='my-20 -mx-10 lg:-mx-20'>
       <div className='grid grid-cols-3 gap-x-3 lg:gap-x-10 '>
-        <img className='w-full h-52 lg:h-72 object-cover'  src="https://cloudfront-us-east-1.images.arcpublishing.com/semana/NEDRHM3KONAINNZNFXGHSVR73E.jpg" alt="" />
-        <img className='w-full h-52 lg:h-72 object-cover'  src="https://img.freepik.com/foto-gratis/estudiantes-aprendiendo-escuela-su-salon-clases_23-2149511026.jpg" alt="" />
-        <img className='w-full h-52 lg:h-72 object-cover'  src="https://static.guiainfantil.com/uploads/educacion/deberesescolares-porque.jpg" alt="" />
+        <img className='w-full h-52 lg:h-72 object-cover'  src={img1} alt="" />
+        <img className='w-full h-52 lg:h-72 object-cover'  src={img2} alt="" />
+        <img className='w-full h-52 lg:h-72 object-cover'  src={img3} alt="" />
       </div>
     </div>
   )
