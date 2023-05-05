@@ -11,12 +11,17 @@ function Post() {
 
     const post = useSelector((state) => state.post.post)
     const error = useSelector((state) => state.post.error)
+    const [loading, setLoading] = React.useState(true);
 
     const dispatch = useDispatch();
     React.useEffect(() => {
         window.scrollTo(0,0);
-        dispatch(fetchPost(id));
+        dispatch(fetchPost(id)).then(() => setLoading(false));
     }, [dispatch])
+
+    if (loading) {
+        return <div></div>; // mostrar un div en blanco mientras carga
+    }
 
     if (error) {
         return(
