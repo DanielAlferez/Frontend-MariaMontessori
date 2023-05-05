@@ -13,7 +13,9 @@ function Posts() {
       dispatch(fetchPosts());
   }, [dispatch])
 
-  
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   return (
     <Layout>
