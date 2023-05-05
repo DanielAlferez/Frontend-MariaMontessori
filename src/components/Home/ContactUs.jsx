@@ -5,6 +5,14 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 function ContactUs() {
+
+  const myIcon = L.icon({
+    iconUrl: "https://icones.pro/wp-content/uploads/2021/02/icone-de-broche-de-localisation-rouge.png",
+    iconSize: [45, 43],
+    iconAnchor: [23.5, 41],
+    popupAnchor: [0, -33]
+  });
+
   return (
     <div className='bg-green-100'>
       <div className='lg:grid grid-cols-3 lg:p-20'>
@@ -25,7 +33,7 @@ function ContactUs() {
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <Marker position={[3.98282, -73.76168]}>
+              <Marker position={[3.98282, -73.76168]} icon={myIcon}>
                   <Popup>
                     <h1 className='text-center font-bold '>Maria Montessori</h1>
                     <p>Carrera 17A #9-49 Barrio Jardín, Acacias, Meta</p>
