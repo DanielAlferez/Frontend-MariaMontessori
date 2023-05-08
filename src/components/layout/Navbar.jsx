@@ -5,12 +5,28 @@ import logo from '../../assets/logo.webp'
 
 function Navbar() {
 
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      navbar.classList.add('fixed');
+      navbar.classList.add('bg-white/95');
+      navbar.classList.remove('absolute');
+      navbar.classList.remove('bg-white/10');
+    } else {
+      navbar.classList.remove('fixed');
+      navbar.classList.add('absolute');
+      navbar.classList.remove('bg-white/95');
+      navbar.classList.add('bg-white/10');
+    }
+  });
+  
   return (
-    <div className='sticky z-50 top-0 bg-white '>
-      <div className='drop-shadow-sm py-3 grid grid-cols-2 items-center px-10 lg:px-20 border-y border-gray-200'>
-        <img src={logo} className='w-20 h-20 lg:w-24 lg:h-24' />
+    <div className='absolute navbar w-full z-50 top-0 bg-white/10'>
+      <div className='drop-shadow-sm py-2 grid grid-cols-2 items-center px-10 lg:px-32 '>
+        <img src={logo} className='w-20 h-20 lg:w-28 lg:h-28' />
         <div className='justify-end  '>
-          <ul className='text-xl font-bold flex justify-end gap-x-5 lg:gap-x-10'>
+          <ul className='text-2xl font-bold flex justify-end gap-x-5 lg:gap-x-10'>
             <li className='hover:text-principal'><Link to="/">Inicio</Link></li>
             <li className='hover:text-principal'><Link to="/posts">Posts</Link></li>
             <li className='group relative hover:text-principal'>
