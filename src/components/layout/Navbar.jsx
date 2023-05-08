@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div className='sticky z-50 top-0 bg-white '>
       <div className='drop-shadow-sm py-3 grid grid-cols-2 items-center px-10 lg:px-20 border-y border-gray-200'>
-        <img src={logo} className='w-20 h-20 lg:w-24 lg:h-24' />
+        <Link to="/"><img src={logo} className='w-20 h-20 lg:w-24 lg:h-24' /></Link>
         <div className='justify-end  '>
           <ul className='text-xl font-bold flex justify-end gap-x-5 lg:gap-x-10'>
             <li className='hover:text-principal'><Link to="/">Inicio</Link></li>
