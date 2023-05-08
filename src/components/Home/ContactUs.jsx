@@ -28,7 +28,7 @@ function ContactUs() {
           </div>
         </div>
         <div className='col-span-2 m-10 z-0'>
-          <MapContainer className='w-full h-80' center={[3.98282, -73.76168]} zoom={20} >
+          <MapContainer className='w-full h-80 z-0' center={[3.98282, -73.76168]} zoom={20} >
               <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
